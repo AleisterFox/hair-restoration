@@ -458,6 +458,9 @@ h2 {
     padding-top: 4rem;
     padding-bottom: 4rem;
     background: linear-gradient(180deg, rgba(83, 83, 83, 0.8), rgba(83, 83, 83, 0.5), rgba(83, 83, 83, 0));
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
 }
 
 #partners h2 {
@@ -465,7 +468,21 @@ h2 {
     color: white;
 }
 
-#container {
+#partners .container {
+    flex-basis: 100rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4rem;
+    justify-content: space-between;
+
+}
+
+#partners figure {
+    height: 6rem;
+    filter: invert(1);
+}
+
+#faqs {
     margin: var(--center);
     margin-top: 5rem;
     padding-bottom: 10rem;
@@ -475,9 +492,42 @@ h2 {
     width: var(--width);
 }
 
-#container .text {
+#faqs .text {
     flex-basis: 50rem;
     flex-grow: 1;
+}
+
+#faqs .text:last-child {
+    border: none;
+}
+
+#faqs details {
+    margin: 0;
+    width: 100%;
+    border: 2px solid var(--red-brown);
+    padding: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+#faqs summary {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 2.4rem;
+}
+
+#faqs details[open] > summary i {
+    transform: rotate(0) !important;
+}
+
+#faqs details[open] > summary i::before {
+    content: "-";
+}
+
+#faqs p {
+    font-size: 1.8rem;
 }
 
 /* FOOTER  */
